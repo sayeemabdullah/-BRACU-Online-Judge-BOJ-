@@ -24,7 +24,7 @@
 
 <style>
 textarea{
-  font-family: 'Source Code Pro';
+  font-family: "Courier New";
 }
 
 h1{

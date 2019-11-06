@@ -26,42 +26,135 @@
 
 <style>
 .button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  width: 100%;
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        width: 100%;
 }
 
 html, 
 body {
-height: 100%;
+        height: 100%;
 }
 
 body {
-background-image: url("image/BOJ.png");
-background-repeat: no-repeat;
-background-size: 100% 100%;
+        background: #333;
+        padding-top: 5em;
+        display: flex;
+        justify-content: center;
+}
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+section{
+        color: white;
+        border-radius: 1em;
+        padding: 1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%) }
+
+        .btn-one {
+    color: #FFF;
+    transition: all 0.3s;
+    position: relative;
+}
+.wrapper{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+a{
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: 'Audiowide';
+  text-decoration: none;
+  color: white;
+  background:black;
+  border: 2px solid black;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+}
+
+a span{
+  position: relative;
+  z-index: 2;
+}
+
+a:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #ff003b;
+  transition: all .35s;
+}
+
+a:hover{
+  color: #fff;
+}
+
+a:hover:after{
+  width: 100%;
 }
 </style>
 </head>
 <body>
 
-<div class="topbar">
-  <div class="topnav-right">
-        <a href="index.php" float:left>BRACU ONLINE JUDGE (BOJ)</a>
+<section>
+<div class="typewriter">
+  <h1>BRACU Online Judge (BOJ)</h1>
 </div>
-        <a href="compiler.php"><i class="fa fa-terminal"></i> Compiler</a>
-        <a href="problemset.php"><i class="fa fa-tasks"></i> Problem Set</a>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<div class="wrapper">
+  <a href="compiler.php"><span>SIGN IN</span></a>
+  <br>
+  <a href="#"><span>SIGN UP</span></a>
 </div>
-</div>
-</div>
+  
+</section>
 </body>
 </html>
 
