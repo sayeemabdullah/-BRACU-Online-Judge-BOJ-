@@ -63,6 +63,11 @@ button:hover {
   background-color: red;
 }
 
+.tbtn {
+  width: 100%;
+  background-color: black;
+}
+
 /* Add padding to container elements */
 .container {
   padding: 16px;
@@ -138,10 +143,9 @@ h2{
       
       <div class="clearfix">
         <button type="submit" class="signupbtn"><b> Sign In</b></button>
-        <button class="cbtn" onclick="window.location.href = 'compiler.php';"><i class="fa fa-ban"></i><b> Temporay Login <b><i class="fa fa-ban"></i></button>
+        <button class="tbtn" onclick="window.location.href = 'compiler.php';"><i class="fa fa-ban"></i><b> Temporay Login <b><i class="fa fa-ban"></i></button>
         <button class="cbtn" onclick="window.location.href = 'index.php';"><b> Cancel<b></button>
       </div>
-    </div>
   </form>
 </body>
 </html>
