@@ -18,12 +18,6 @@
         <script src="js/vendor/jquery-1.12.0.min.js"></script>
         <link rel="stylesheet" href="style.css">
         <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
-
-
-
-
-
-
 <style>
 .button {
         background-color: #4CAF50; /* Green */
@@ -38,12 +32,10 @@
         cursor: pointer;
         width: 100%;
 }
-
 html, 
 body {
         height: 100%;
 }
-
 body {
         background: #333;
         padding-top: 5em;
@@ -62,13 +54,11 @@ body {
     typing 3.5s steps(30, end),
     blink-caret .5s step-end infinite;
 }
-
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
 }
-
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
@@ -83,7 +73,6 @@ section{
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%) }
-
         .btn-one {
     color: #FFF;
     transition: all 0.3s;
@@ -95,7 +84,6 @@ section{
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 a{
   display: block;
   width: 200px;
@@ -112,12 +100,10 @@ a{
   position: relative;
   transition: all .35s;
 }
-
 a span{
   position: relative;
   z-index: 2;
 }
-
 a:after{
   position: absolute;
   content: "";
@@ -128,18 +114,15 @@ a:after{
   background: #ff003b;
   transition: all .35s;
 }
-
 a:hover{
   color: #fff;
 }
-
 a:hover:after{
   width: 100%;
 }
 </style>
 </head>
 <body>
-
 <section>
 <div class="typewriter">
   <h1>BRACU Online Judge (BOJ)</h1>
@@ -151,11 +134,9 @@ a:hover:after{
 <div class="wrapper">
   <a href="compiler.php"><span>SIGN IN</span></a>
   <br>
-  <a href="#"><span>SIGN UP</span></a>
+  <a href="signup.php"><span>SIGN UP</span></a>
 </div>
   
 </section>
 </body>
 </html>
-
-
