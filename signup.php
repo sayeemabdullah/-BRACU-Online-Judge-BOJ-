@@ -128,7 +128,7 @@ h2{
 <body>
   <form class="modal-content" action="/action_page.php">
     <div class="container">
-    
+     <h1>BRACU Online Judge (BOJ)</h1>
       <hr>
       <input type="text" placeholder="Enter Email" name="email" required>
 
