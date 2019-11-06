@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+<head>
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="icon" type="image/png" href="image/BOJ.png">
+</head>
 <style>
 body {font-family: Arial, Helvetica, sans-serif;
     background: #333;}
@@ -31,6 +35,7 @@ button {
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
+  border-radius: 12px;
 }
 
 button:hover {
@@ -117,8 +122,8 @@ hr {
       
 
       <div class="clearfix">
-        <button type="submit" class="signupbtn">Sign Up</button>
-        <button class="cbtn" onclick="window.location.href = 'index.php';">Cancel</button>
+        <button type="submit" class="signupbtn"><i class="fa fa-check"></i><b> Sign Up</b></button>
+        <button class="cbtn" onclick="window.location.href = 'index.php';"><i class="fa fa-times"></i><b> Cancel<b></button>
       </div>
     </div>
   </form>
