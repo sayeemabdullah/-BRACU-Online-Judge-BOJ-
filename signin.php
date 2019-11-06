@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <link rel="icon" type="image/png" href="image/BOJ.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Source Code Pro' rel='stylesheet'>
-        <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
-        <link rel="stylesheet" href="style.css">
-        <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
-        <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+<link rel="stylesheet" href="style.css">
+<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+ <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
 <title>BRACU Online Judge</title>
 </head>
 <style>
@@ -84,8 +87,8 @@ button:hover {
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
   border-radius: 15px;
+  width: 80%; /* Could be more or less, depending on screen size */
 }
 
 /* Style the horizontal ruler */
@@ -113,7 +116,6 @@ hr {
      width: 100%;
   }
 }
-
 h1,h2{
     text-align: center;
 }
@@ -128,17 +130,15 @@ h2{
 <body>
   <form class="modal-content" action="/action_page.php">
     <div class="container">
-    
+    <h1>BRACU Online Judge (BOJ)</h1>  
       <hr>
       <input type="text" placeholder="Enter Email" name="email" required>
 
       <input type="password" placeholder="Enter Password" name="psw" required>
-
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
       
-
       <div class="clearfix">
-        <button type="submit" class="signupbtn"><b> Sign Up</b></button>
+        <button type="submit" class="signupbtn"><b> Sign In</b></button>
+        <button class="cbtn" onclick="window.location.href = 'compiler.php';"><i class="fa fa-ban"></i><b> Temporay Login <b><i class="fa fa-ban"></i></button>
         <button class="cbtn" onclick="window.location.href = 'index.php';"><b> Cancel<b></button>
       </div>
     </div>
