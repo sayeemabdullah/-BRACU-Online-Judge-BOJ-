@@ -47,6 +47,9 @@ h4{
 <div class="col-sm-8">
 <div class="form-group">
 <form action="compile.php" id="form" name="f2" method="POST" >
+<label for="prob"><h4>Problem ID :</h4></label>
+<input class="form-control" name="problemid">
+<br><br>
 <label for="lang"><h4>Language :</h4></label>
 <select class="form-control" name="language">
 <option value="c">C</option>
@@ -56,19 +59,8 @@ h4{
 </select><br><br>
 <label for="ta"><h4>SOURCE CODE :</h4></label>
 <textarea class="form-control" name="code" rows="10" cols="50"></textarea><br><br>
-<label for="in"><h4>Enter Sample Input :</h4></label>
-<textarea class="form-control" name="input" rows="10" cols="50"></textarea><br><br>
-<input type="submit" id="st" class="btn btn-success btn-lg btn-block" value="Run Code"><br><br><br>
+<input type="submit" id="st" class="btn btn-success btn-lg btn-block" value="SUBMIT"><br><br><br>
 </form>
-<script type="text/javascript">
-  
-  $(document).ready(function(){
-     $("#st").click(function(){
-  
-           $("#div").html("Finger Crossed...loading");
-     });
-  });
-</script>
 <script>
 //wait for page load to initialize script
 $(document).ready(function(){
@@ -80,30 +72,13 @@ $(document).ready(function(){
       $.ajax({
             type: "POST", //type of submit
             cache: false, //important or else you might get wrong data returned to you
-            url: "compile.php", //destination
+            url: "submitcompile.php", //destination
             datatype: "html", //expected data format from process.php
             data: $('form').serialize(), //target your form's data and serialize for a POST
         });
     });
 });
-</script>
-<label for="out"><h4>Output :</h4></label>
-<textarea id='div' class="form-control" name="output" rows="10" cols="50"></textarea><br><br>
-<a href="compiler.php" class="btn btn-danger btn-lg btn-block" role="button">Refresh</a>
-<!--<script>
-"use strict";
-function submitForm(oFormElement)
-{
-  var xhr = new XMLHttpRequest();
-  var display=document.getElementById('div');
-  xhr.onload = function(){ display.innerHTML=xhr.responseText; }
-  xhr.open (oFormElement.method, oFormElement.action, true);
-  xhr.send (new FormData (oFormElement));
-  return false;
-}
-</script>-->
-<!--<label for="out">Output</label>
-<textarea id='div' class="form-control" name="output" rows="10" cols="50"></textarea><br><br>-->
+
 </div>
 </div>
 <div class="col-sm-4">
