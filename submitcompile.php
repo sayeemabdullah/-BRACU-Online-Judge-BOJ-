@@ -1,3 +1,4 @@
+<?php include 'connection.php'; ?>
 <?php
 
 	$languageID=$_POST["language"];

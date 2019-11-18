@@ -1,3 +1,4 @@
+<?php include 'connection.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,7 +47,7 @@ h4{
 <div class="row cspace">
 <div class="col-sm-8">
 <div class="form-group">
-<form action="compile.php" id="form" name="f2" method="POST" >
+<form action="submitcompile.php" id="form" name="f2" method="POST" >
 <label for="prob"><h4>Problem ID :</h4></label>
 <input class="form-control" name="problemid">
 <br><br>
