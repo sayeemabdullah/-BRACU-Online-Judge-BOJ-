@@ -1,11 +1,12 @@
 <?php
-    
+    include 'connection.php';
     putenv("PATH=C:\Program Files (x86)\CodeBlocks\MinGW\bin");
 	$CC="gcc";
 	$out="a.exe";
 	$code=$_POST["code"];
 	$problem_id=$_POST["problemid"];
 	$input="Select test_case from archive where problem_id = '" . $problem_id . "'";
+	$solution="Select testcase_output from archive where problem_id = '" . $problem_id . "'";
 	$filename_code="main.c";
 	$filename_in="input.txt";
 	$filename_error="error.txt";
@@ -40,12 +41,12 @@
 			$output=shell_exec($out);
 		}
 		//echo "<pre>$output</pre>";
-		echo "$output";
+		//echo "$output";
         //echo "<textarea id='div' class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">$output</textarea><br><br>";
 	}
 	else if(!strpos($error,"error"))
 	{
-		echo "<pre>$error</pre>";
+		//echo "<pre>$error</pre>";
 		if(trim($input)=="")
 		{
 			$output=shell_exec($out);
@@ -56,12 +57,18 @@
 			$output=shell_exec($out);
 		}
 		//echo "<pre>$output</pre>";
-		echo "$output";
+		//echo "$output";
                 //echo "<textarea id='div' class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">$output</textarea><br><br>";
 	}
 	else
 	{
-		echo "<pre>$error</pre>";
+		//echo "<pre>$error</pre>";
+	}
+	if($output == $solution){
+		echo "Congrats!! Correct Answer."
+	}
+	else{
+		echo "Wrong Answer!! Please Try Again."
 	}
 	exec("del $filename_code");
 	exec("del *.o");

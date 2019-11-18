@@ -1,11 +1,12 @@
 <?php
-
+	include 'connection.php';
     putenv("PATH=C:\Program Files (x86)\CodeBlocks\MinGW\bin");
 	$CC="g++";
 	$out="a.exe";
 	$code=$_POST["code"];
 	$problem_id=$_POST["problemid"];
 	$input="Select test_case from archive where problem_id = '" . $problem_id . "'";
+	$solution="Select testcase_output from archive where problem_id = '" . $problem_id . "'";
 	$filename_code="main.cpp";
 	$filename_in="input.txt";
 	$filename_error="error.txt";
@@ -60,7 +61,14 @@
 	}
 	else
 	{
-		echo "<pre>$error</pre>";
+		//echo "<pre>$error</pre>";
+	}
+
+	if($output == $solution){
+		echo "Congrats!! Correct Answer."
+	}
+	else{
+		echo "Wrong Answer!! Please Try Again."
 	}
 	exec("del $filename_code");
 	exec("del *.o");
