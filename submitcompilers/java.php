@@ -28,6 +28,15 @@
 	$solution = $row['testcase_output'];
 	echo "$solution";
 	echo "<br>";
+	/*
+	if($input == $solution){
+		echo "Congrats!! Correct Answer."
+	}
+	else{
+		echo "Wrong Answer!! Please Try Again."
+	}
+	echo <br>;
+	*/
 	//$result = mysql_query($sql, $connection);
 	//$solution = $connection->get_var("Select testcase_output from archive where problem_id = '" . $problem_id . "'");
 	//$solution = mysql_fetch_assoc($result);
@@ -100,13 +109,13 @@
 	{
 		echo "<pre>$error</pre>";
 	}
-	/*
+	echo "<br>";
 	if($output == $solution){
-		echo "Congrats!! Correct Answer."
+		echo "Congrats!! Correct Answer.";
 	}
 	else{
-		echo "Wrong Answer!! Please Try Again."
-	}*/
+		echo "Wrong Answer!! Please Try Again.";
+	}
 	exec("del $filename_code");
 	exec("del *.txt");
 	exec("del $executable");
