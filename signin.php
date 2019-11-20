@@ -19,7 +19,6 @@
 body {font-family: Arial, Helvetica, sans-serif;
     background: #333;}
 * {box-sizing: border-box;}
-
 /* Full-width input fields */
 input[type=text], input[type=password] {
   width: 100%;
@@ -30,13 +29,11 @@ input[type=text], input[type=password] {
   background: #f1f1f1;
   border-radius:10px;
 }
-
 /* Add a background color when the inputs get focus */
 input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
 }
-
 /* Set a style for all buttons */
 button {
   
@@ -49,11 +46,9 @@ button {
   opacity: 0.9;
   border-radius: 12px;
 }
-
 button:hover {
   opacity:1;
 }
-
 .signupbtn {
   width: 100%;
   background-color: #4CAF50;
@@ -63,17 +58,14 @@ button:hover {
   width: 100%;
   background-color: red;
 }
-
 .tbtn {
   width: 100%;
   background-color: black;
 }
-
 /* Add padding to container elements */
 .container {
   padding: 16px;
 }
-
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -87,7 +79,6 @@ button:hover {
   background-color: #333;
   padding-top: 50px;
 }
-
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
@@ -96,7 +87,6 @@ button:hover {
   border-radius: 15px;
   width: 80%; /* Could be more or less, depending on screen size */
 }
-
 /* Style the horizontal ruler */
 hr {
   border: 1px solid #f1f1f1;
@@ -108,14 +98,12 @@ hr {
   color: #f44336;
   cursor: pointer;
 }
-
 /* Clear floats */
 .clearfix::after {
   content: "";
   clear: both;
   display: table;
 }
-
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
