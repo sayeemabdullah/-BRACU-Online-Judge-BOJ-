@@ -1,9 +1,17 @@
-<?php include 'connection.php'; ?>
+<?php include 'connection.php'; 
+$id=$_REQUEST['id'];
+$sqll = "SELECT question from archive where question_id = '" . $id . "'";
+$resultt = mysqli_query($connection, $sqll);
+$roww = mysqli_fetch_assoc($resultt);
+$question = $roww['question'];
+$sqll = "SELECT problem_name from archive where question_id = '" . $id . "'";
+$resultt = mysqli_query($connection, $sqll);
+$roww = mysqli_fetch_assoc($resultt);
+$name = $roww['problem_name'];
+?>
 <!DOCTYPE html>
 <html>
 <head>
-  
-    
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>BRACU Online Judge</title>
@@ -22,16 +30,47 @@
         <link rel="stylesheet" href="style.css">
         <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
-        </head>
+</head>
 <style>
 textarea{
   font-family: "Courier New";
 }
-h1{
+table , h1 , h3{
   font-family: 'Source Code Pro';
+  text-align: center;
 }
+
 h4{
   font-family: 'Fredoka One';
+}
+body{
+    background-color:#EEEEEE;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: #EEEEEE;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button2 {
+  background-color: #EEEEEE; 
+  color: black; 
+  border: 2px solid black;
+}
+.button2:hover {
+  background-color: black;
+  color: white;
+}
+.wrapper {
+    text-align: center;
 }
 </style>
 <body>
@@ -44,63 +83,18 @@ h4{
         <a href="submit.php"><i class="fa fa-arrow-right"></i> Submit</a>
         <a href="account.php"><i class="fa fa-user"></i> My Account</a>
 </div>
-<div class="row cspace">
-<div class="col-sm-8">
-<div class="form-group">
-<form action="submitcompile.php" id="form" name="f2" method="POST" >
-<label for="prob"><h4>Problem ID :</h4></label>
-<input class="form-control" name="problemid">
+<h1><?php echo $name ?></h1>
+<h3>Problem ID :  <?php echo $id ?></h3>
 <br><br>
-<label for="lang"><h4>Language :</h4></label>
-<select class="form-control" name="language">
-<option value="c">C</option>
-<option value="cpp">C++</option>
-<option value="cpp11">C++11</option>
-<option value="java">Java</option>
-</select><br><br>
-<label for="ta"><h4>SOURCE CODE :</h4></label>
-<textarea class="form-control" name="code" rows="10" cols="50"></textarea><br><br>
-<input type="submit" id="st" class="btn btn-success btn-lg btn-block" value="SUBMIT"><br><br><br>
-</form>
+<pre>
+<div>
+    <p id="demo"><?php echo $question?></p>
 </div>
+</pre>
+<div class="wrapper">
+<tr>
+<a href="quicksubmit.php?id=<?php echo $id;?>" class="button button2">submit</a>
+</tr>
 </div>
-</div>
-<div class="col-sm-4">  
-</div>
-</div>
-</div>
-<br><br><br>
-<div class="area">
-<div class="well foot">
-<div class="row area">
-<div class="col-sm-3">
-</div>
-<div class="col-sm-5">
-<div class="fm">
-BETA VERSION<bR>
-© 2019 BRACU Online Judge (BOJ)<br>
-</div>
-</div>
-</div>
-</div>
-</div>
-<script>
-//wait for page load to initialize script
-$(document).ready(function(){
-    //listen for form submission
-    $('form').on('submit', function(e){
-      //prevent form from submitting and leaving page
-      e.preventDefault();
-      // AJAX 
-      $.ajax({
-            type: "POST", //type of submit
-            cache: false, //important or else you might get wrong data returned to you
-            url: "submitcompile.php", //destination
-            datatype: "html", //expected data format from process.php
-            data: $('form').serialize(), //target your form's data and serialize for a POST
-        });
-    });
-});
-<!/script>
 </body>
-</html>
+<style>
