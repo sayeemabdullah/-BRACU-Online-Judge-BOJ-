@@ -28,7 +28,7 @@ input[type=text], input[type=password] {
 }
 /* Add a background color when the inputs get focus */
 input[type=text]:focus, input[type=password]:focus {
-  background-color: white;
+  background-color: #c7f0ec;
   outline: none;
 }
 /* Set a style for all buttons */
@@ -119,12 +119,17 @@ p{
 }
 a{
   color:lightblue;
+  text-decoration: none;
 }
 </style>
 <body>
   <form class="modal-content" action="/action_page.php">
     <div class="container">
-     <h1>BRACU Online Judge (BOJ)</h1>
+    <h1>
+      <a href="index.php">
+      BRACU Online Judge (BOJ)
+      </a>
+      </h1>
       <input type="text" placeholder="Enter Student ID" name="sid" required>
 
       <input type="text" placeholder="Enter Name" name="name" required>

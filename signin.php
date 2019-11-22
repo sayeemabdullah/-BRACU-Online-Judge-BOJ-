@@ -249,10 +249,23 @@ p {
 .text--center {
   text-align: center;
 }
-
+h1{
+    font-family: 'Audiowide';
+    color:white;
+    font-size:40px;
+}
+a{
+  color:white;
+  text-decoration: none;
+}
 </style>
 <body class="align">
-
+<h1>
+      <a href="index.php">
+      BRACU Online Judge (BOJ)
+      </a>
+      </h1>
+<br>
 <div class="grid">
 
   <form action="https://httpbin.org/post" method="POST" class="form login">
