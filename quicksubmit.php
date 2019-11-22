@@ -62,7 +62,7 @@ h4{
 </select><br><br>
 <label for="ta"><h4>SOURCE CODE :</h4></label>
 <textarea class="form-control" name="code" rows="10" cols="50"></textarea><br><br>
-<input type="submit" id="st" class="btn btn-success btn-lg btn-block" value="SUBMIT"><br><br><br>
+<input type="submit" id="st" class="btn btn-secondary btn-lg btn-block" value="SUBMIT"><br><br><br>
 </form>
 </div>
 </div>

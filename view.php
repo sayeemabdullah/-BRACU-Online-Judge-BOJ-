@@ -35,7 +35,7 @@ $name = $roww['problem_name'];
 textarea{
   font-family: "Courier New";
 }
-table , h1 , h3{
+table , h1 , h3 , h5{
   font-family: 'Source Code Pro';
   text-align: center;
 }
@@ -93,8 +93,22 @@ body{
 </pre>
 <div class="wrapper">
 <tr>
-<a href="quicksubmit.php?id=<?php echo $id;?>" class="button button2">submit</a>
+<a href="quicksubmit.php?id=<?php echo $id;?>" class="button button2"><h5>submit</h5></a>
 </tr>
 </div>
+<div class="area">
+<div class="well foot">
+<div class="row area">
+<div class="col-sm-3">
+</div>
+<div class="col-sm-5">
+<div class="fm">
+BETA VERSION<bR>
+© 2019 BRACU Online Judge (BOJ)<br>
+</div>
+</div>
+</div>
+</div>
+</div>
 </body>
-<style>
+</html>
