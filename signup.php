@@ -14,9 +14,8 @@
 </head>
 <style>
 body {font-family: Arial, Helvetica, sans-serif;
-    background: #333;}
+    background: #2c3338;}
 * {box-sizing: border-box;}
-
 /* Full-width input fields */
 input[type=text], input[type=password] {
   width: 100%;
@@ -27,13 +26,11 @@ input[type=text], input[type=password] {
   background: #f1f1f1;
   border-radius:10px;
 }
-
 /* Add a background color when the inputs get focus */
 input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
+  background-color: white;
   outline: none;
 }
-
 /* Set a style for all buttons */
 button {
   
@@ -46,26 +43,20 @@ button {
   opacity: 0.9;
   border-radius: 12px;
 }
-
 button:hover {
   opacity:1;
 }
-
 .signupbtn {
+  border-radius: 4px;
   width: 100%;
-  background-color: #4CAF50;
+  background-color: #ea4c88;
+  text-transform: uppercase;
+  font-size:20px;
 }
-    
-.cbtn {
-  width: 100%;
-  background-color: red;
-}
-
 /* Add padding to container elements */
 .container {
   padding: 16px;
 }
-
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -76,19 +67,17 @@ button:hover {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: #333;
+  background-color: #2c3338;
   padding-top: 50px;
 }
-
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #2c3338;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
+  border: 1px solid #2c3338;
   width: 80%; /* Could be more or less, depending on screen size */
   border-radius: 15px;
 }
-
 /* Style the horizontal ruler */
 hr {
   border: 1px solid #f1f1f1;
@@ -100,37 +89,46 @@ hr {
   color: #f44336;
   cursor: pointer;
 }
-
 /* Clear floats */
 .clearfix::after {
   content: "";
   clear: both;
   display: table;
 }
-
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
+  .signupbtn {
      width: 100%;
   }
 }
-
 h1,h2{
     text-align: center;
 }
 h1{
     font-family: 'Audiowide';
+    color:white;
 }
 h2{
-    font-family: 'Source Code Pro';
+    font-family: 'Audiowide';
+    color:white;
     font-size:40px;
+}
+p{
+  color:white;
+  text-align: center;
+}
+a{
+  color:lightblue;
 }
 </style>
 <body>
   <form class="modal-content" action="/action_page.php">
     <div class="container">
      <h1>BRACU Online Judge (BOJ)</h1>
-      <hr>
+      <input type="text" placeholder="Enter Student ID" name="sid" required>
+
+      <input type="text" placeholder="Enter Name" name="name" required>
+
       <input type="text" placeholder="Enter Email" name="email" required>
 
       <input type="password" placeholder="Enter Password" name="psw" required>
@@ -140,8 +138,8 @@ h2{
 
       <div class="clearfix">
         <button type="submit" class="signupbtn"><b> Sign Up</b></button>
-        <button class="cbtn" onclick="window.location.href = 'index.php';"><b> Cancel<b></button>
       </div>
+      <p class="text--center">Already a member? <a href="signin.php">Sign in now</a></p>
     </div>
   </form>
 </body>

@@ -62,28 +62,10 @@ h4{
 <textarea class="form-control" name="code" rows="10" cols="50"></textarea><br><br>
 <input type="submit" id="st" class="btn btn-success btn-lg btn-block" value="SUBMIT"><br><br><br>
 </form>
-<script>
-//wait for page load to initialize script
-$(document).ready(function(){
-    //listen for form submission
-    $('form').on('submit', function(e){
-      //prevent form from submitting and leaving page
-      e.preventDefault();
-      // AJAX 
-      $.ajax({
-            type: "POST", //type of submit
-            cache: false, //important or else you might get wrong data returned to you
-            url: "submitcompile.php", //destination
-            datatype: "html", //expected data format from process.php
-            data: $('form').serialize(), //target your form's data and serialize for a POST
-        });
-    });
-});
-
 </div>
 </div>
-<div class="col-sm-4">
-  
+</div>
+<div class="col-sm-4">  
 </div>
 </div>
 </div>
@@ -102,5 +84,23 @@ BETA VERSION<bR>
 </div>
 </div>
 </div>
+<script>
+//wait for page load to initialize script
+$(document).ready(function(){
+    //listen for form submission
+    $('form').on('submit', function(e){
+      //prevent form from submitting and leaving page
+      e.preventDefault();
+      // AJAX 
+      $.ajax({
+            type: "POST", //type of submit
+            cache: false, //important or else you might get wrong data returned to you
+            url: "submitcompile.php", //destination
+            datatype: "html", //expected data format from process.php
+            data: $('form').serialize(), //target your form's data and serialize for a POST
+        });
+    });
+});
+<!/script>
 </body>
 </html>

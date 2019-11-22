@@ -5,8 +5,22 @@
 	$out="a.exe";
 	$code=$_POST["code"];
 	$problem_id=$_POST["problemid"];
-	$input="Select test_case from archive where problem_id = '" . $problem_id . "'";
-	$solution="Select testcase_output from archive where problem_id = '" . $problem_id . "'";
+	$sqll = "SELECT test_case from archive where question_id = '" . $problem_id . "'";
+	$resultt = mysqli_query($connection, $sqll);
+	$roww = mysqli_fetch_assoc($resultt);
+	$input = $roww['test_case'];
+	echo "$problem_id";
+	echo "<br>";
+	echo "$code";
+	echo "<br>";
+	echo "$input";
+	echo "<br>";
+	$sql = "SELECT testcase_output from archive where question_id = '" . $problem_id . "'";
+	$result = mysqli_query($connection, $sql);
+	$row = mysqli_fetch_assoc($result);
+	$solution = $row['testcase_output'];
+	echo "<pre>$solution</pre>";
+	echo "<br>";
 	$filename_code="main.c";
 	$filename_in="input.txt";
 	$filename_error="error.txt";
@@ -40,7 +54,7 @@
 			$out=$out." < ".$filename_in;
 			$output=shell_exec($out);
 		}
-		//echo "<pre>$output</pre>";
+		echo "<pre>$output</pre>";
 		//echo "$output";
         //echo "<textarea id='div' class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">$output</textarea><br><br>";
 	}
@@ -56,19 +70,20 @@
 			$out=$out." < ".$filename_in;
 			$output=shell_exec($out);
 		}
-		//echo "<pre>$output</pre>";
+		echo "<pre>$output</pre>";
 		//echo "$output";
                 //echo "<textarea id='div' class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">$output</textarea><br><br>";
 	}
 	else
 	{
-		//echo "<pre>$error</pre>";
+		echo "<pre>$error</pre>";
 	}
+	echo "<br>";
 	if($output == $solution){
-		echo "Congrats!! Correct Answer."
+		echo "Congrats!! Correct Answer.";
 	}
 	else{
-		echo "Wrong Answer!! Please Try Again."
+		echo "Wrong Answer!! Please Try Again.";
 	}
 	exec("del $filename_code");
 	exec("del *.o");
