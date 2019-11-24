@@ -41,7 +41,7 @@ h4{
 <div class="topbar">
         <div class="topnav-right">
             <a href="logout.php" float:left><i class="fa fa-power-off"></i></a>
-            <a href="index.php" float:left>BRACU ONLINE JUDGE (BOJ)</a>
+            <a href="" float:left>BRACU ONLINE JUDGE (BOJ)</a>
         </div>
         <a href="compiler.php"><i class="fa fa-terminal"></i> Compiler</a>
         <a href="archive.php"><i class="fa fa-puzzle-piece"></i> Archive</a>
