@@ -75,14 +75,15 @@ body{
 </style>
 <body>
 <div class="topbar">
-  <div class="topnav-right">
-        <a href="index.php" float:left>BRACU ONLINE JUDGE (BOJ)</a>
-</div>
+        <div class="topnav-right">
+            <a href="logout.php" float:left><i class="fa fa-power-off"></i></a>
+            <a href="index.php" float:left>BRACU ONLINE JUDGE (BOJ)</a>
+        </div>
         <a href="compiler.php"><i class="fa fa-terminal"></i> Compiler</a>
         <a href="archive.php"><i class="fa fa-puzzle-piece"></i> Archive</a>
         <a href="submit.php"><i class="fa fa-arrow-right"></i> Submit</a>
-        <a href="account.php"><i class="fa fa-user"></i> My Account</a>
-</div>
+        <a href="rank.php"><i class="fa fa-trophy"></i> Rank</a>
+    </div>
 <h1><?php echo $name ?></h1>
 <h3>Problem ID :  <?php echo $id ?></h3>
 <br><br>

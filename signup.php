@@ -1,4 +1,22 @@
-<?php include 'connection.php'; ?>
+<?php include 'connection.php'; 
+if(isset($_POST['done'])){
+  $SID = $_POST['sid'];
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $password = $_POST['psw'];
+  $confirmpassword = $_POST['psw-repeat'];
+  if ($password != $confirmpassword) {
+    echo '<script language="javascript">';
+    echo 'alert("Password Doesnot Match.")';
+    echo '</script>';
+    }
+  else{
+$query1 = "INSERT INTO `user`(`sid`,`name`,`email`,`password`) VALUES ('$SID','$name', '$email', '$password')";
+$query = mysqli_query($connection,$query1);
+header("Location: signin.php");
+}
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -123,7 +141,8 @@ a{
 }
 </style>
 <body>
-  <form class="modal-content" action="/action_page.php">
+<br><br><br>
+  <form method="post">
     <div class="container">
     <h1>
       <a href="index.php">
@@ -142,10 +161,26 @@ a{
       
 
       <div class="clearfix">
-        <button type="submit" class="signupbtn"><b> Sign Up</b></button>
+        <button type="submit" class="signupbtn" name="done"><b> Sign Up</b></button>
       </div>
       <p class="text--center">Already a member? <a href="signin.php">Sign in now</a></p>
     </div>
   </form>
+  <script>
+  var password = document.getElementById("psw"),
+  confirm_password = document.getElementById("psw-repeat");
+
+function validatePassword() {
+  if (password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity("");
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+
+  </script>
 </body>
 </html>

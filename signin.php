@@ -1,4 +1,32 @@
-<?php include 'connection.php'; ?>
+<?php include 'connection.php'; 
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+  // username and password sent from form 
+  
+  $myusername = mysqli_real_escape_string($connection,$_POST['email']);
+  $mypassword = mysqli_real_escape_string($connection,$_POST['password']); 
+  
+  $sql = "Select * from user where email = '" . $myusername . "' and password = '" . $mypassword . "'";  
+  $result = mysqli_query($connection,$sql);
+  $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+  //$active = $row['active'];
+  
+  $count = mysqli_num_rows($result);
+  
+  // If result matched $myusername and $mypassword, table row must be 1 row
+
+  if($count == 1) {
+     //session_register("myusername");
+     $_SESSION['login_user'] = $myusername;
+
+     header("location: compiler.php");
+  }else {
+     //$error = "Your Login Name or Password is invalid";
+     echo '<script language="javascript">';
+     echo 'alert("Email or Password Doesnot Match.")';
+     echo '</script>';
+    }
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -264,11 +292,11 @@ a{
       <a href="index.php">
       BRACU Online Judge (BOJ)
       </a>
-      </h1>
+</h1>
 <br>
 <div class="grid">
 
-  <form action="https://httpbin.org/post" method="POST" class="form login">
+  <form method="POST" class="form login">
 
     <div class="form__field">
       <label for="login__email"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Email Address</span></label>
