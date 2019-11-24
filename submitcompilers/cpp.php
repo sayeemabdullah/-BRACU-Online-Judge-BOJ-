@@ -80,6 +80,8 @@
 	}
 	echo "<br>";
 	if($output == $solution){
+		$q = "UPDATE `user` SET `solved` = (solved + 1) WHERE `email`= '".$_SESSION["login_user"]."'";
+		$query = mysqli_query($connection,$q);
 		echo "Congrats!! Correct Answer.";
 	}
 	else{

@@ -31,6 +31,10 @@ h1{
 h4{
   font-family: 'Fredoka One';
 }
+#st{
+  color: black;
+  font-weight: bold;
+}
 </style>
 </head>
 <body>
@@ -59,7 +63,7 @@ h4{
 <textarea class="form-control" name="code" rows="10" cols="50"></textarea><br><br>
 <label for="in"><h4>Enter Sample Input :</h4></label>
 <textarea class="form-control" name="input" rows="10" cols="50"></textarea><br><br>
-<input type="submit" id="st" class="btn btn-success btn-lg btn-block" value="Run Code"><br><br><br>
+<input type="submit" id="st" class="btn btn-warning btn-lg btn-block" value="Run Code"><br><br><br>
 </form>
 <script type="text/javascript">
   
