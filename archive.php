@@ -96,7 +96,8 @@
 
 
             <?php
-            $q = "select question_id , problem_name , difficulty from archive group by question_id";
+            $q = "select question_id , problem_name , difficulty from archive ORDER by difficulty";
+            //ORDER BY solved DESC
             $show = mysqli_query($connection, $q);
             while ($res = mysqli_fetch_array($show)) {
                 ?>
