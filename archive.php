@@ -112,7 +112,7 @@
                     <td>
                         <?php echo $res['difficulty'];  ?>
                     </td>
-                    <td> <button class="btn-warning btn"> <a href="view.php?id=<?php echo $res['question_id']; ?>" class="text-dark">
+                    <td> <button class="btn-warning btn"> <a href="view.php?id=<?php echo $res['question_id'];?>" class="text-dark">
                                 View </a> </button> </td>
 
                 </tr>
