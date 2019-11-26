@@ -35,7 +35,7 @@ body {font-family: Arial, Helvetica, sans-serif;
     background: #2c3338;}
 * {box-sizing: border-box;}
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -45,7 +45,7 @@ input[type=text], input[type=password] {
   border-radius:10px;
 }
 /* Add a background color when the inputs get focus */
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus , input[type=email]:focus {
   background-color: #c7f0ec;
   outline: none;
 }
@@ -149,15 +149,15 @@ a{
       BRACU Online Judge (BOJ)
       </a>
       </h1>
-      <input type="text" placeholder="Enter Student ID" name="sid" required>
+      <input type="text" placeholder="Enter Student ID" name="sid" minlength="8" maxlength="8"  required>
 
       <input type="text" placeholder="Enter Name" name="name" required>
 
-      <input type="text" placeholder="Enter Email" name="email" required>
+      <input type="email" placeholder="Enter Email" name="email" required>
 
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password" placeholder="Enter Password" name="psw" minlength="5"  required>
 
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" minlength="5"  required>
       
 
       <div class="clearfix">

@@ -185,6 +185,7 @@ input[type='submit'] {
   margin: calc(var(--formFieldMargin) * -1);
 }
 
+.form input[type='email'],
 .form input[type='password'],
 .form input[type='text'],
 .form input[type='submit'] {
@@ -221,6 +222,7 @@ input[type='submit'] {
 }
 
 .login label,
+.login input[type='email'],
 .login input[type='text'],
 .login input[type='password'],
 .login input[type='submit'] {
@@ -236,6 +238,7 @@ input[type='submit'] {
   padding-right: 1.25rem;
 }
 
+.login input[type='email'],
 .login input[type='password'],
 .login input[type='text'] {
   background-color: var(--loginInputBackgroundColor);
@@ -243,6 +246,9 @@ input[type='submit'] {
   border-top-left-radius: 0;
 }
 
+
+.login input[type='email']:focus,
+.login input[type='email']:hover,
 .login input[type='password']:focus,
 .login input[type='password']:hover,
 .login input[type='text']:focus,
@@ -300,7 +306,7 @@ a{
 
     <div class="form__field">
       <label for="login__email"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Email Address</span></label>
-      <input id="login__email" type="text" name="email" class="form__input" placeholder="Email Address" required>
+      <input id="login__email" type="email" name="email" class="form__input" placeholder="Email Address" required>
     </div>
 
     <div class="form__field">
