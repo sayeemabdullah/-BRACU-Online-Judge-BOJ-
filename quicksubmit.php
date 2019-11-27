@@ -56,7 +56,7 @@ h4{
 <div class="form-group">
 <form action="submitcompile.php" id="form" name="f2" method="POST" >
 <label for="prob"><h4>Problem ID :</h4></label>
-<input class="form-control" name="problemid" value="<?php echo $id;?>">
+<input class="form-control" name="problemid" value="<?php echo $id;?>" required>
 <br><br>
 <label for="lang"><h4>Language :</h4></label>
 <select class="form-control" name="language">
