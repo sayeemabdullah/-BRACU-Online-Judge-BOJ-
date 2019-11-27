@@ -81,9 +81,11 @@
 		$q = "UPDATE `user` SET `solved` = (solved + 1) WHERE `email`= '".$_SESSION["login_user"]."'";
 		$query = mysqli_query($connection,$q);
 		echo "Congrats!! Correct Answer.";
+		header("Location: congrats.php");
 	}
 	else{
-		echo "Wrong Answer!! Please Try Again.";
+		header("Location: wronganswer.php");
+		//echo "Wrong Answer!! Please Try Again.";
 	}
 	exec("del $filename_code");
 	exec("del *.o");

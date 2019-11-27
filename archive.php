@@ -65,7 +65,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6 offset-3">
-                <h1 class="display-6 text-center">Problem Archive</h1>
+                <h1 class="display-6 text-center"><i class="fa fa-puzzle-piece"></i> Problem Archive</h1>
             </div>
         </div>
         <div class="container">

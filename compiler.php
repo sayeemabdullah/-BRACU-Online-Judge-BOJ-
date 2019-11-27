@@ -35,6 +35,10 @@ h4{
   color: black;
   font-weight: bold;
 }
+.btn{
+  color: black;
+  font-weight: bold;
+}
 </style>
 </head>
 <body>
